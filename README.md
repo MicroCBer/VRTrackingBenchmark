@@ -13,7 +13,7 @@ A benchmark for VR tracking system
 
 使用右手柄点击Controller Shake Test开始测试。
 
-测试时尽量保持头显与右手柄静止不动，否则会影响测试结果。
+测试时尽量保持头显与左手柄静止不动，否则会影响测试结果。
 
 参考结果：
 | Device | Result |
@@ -27,7 +27,7 @@ A benchmark for VR tracking system
 
 测试时使头显围绕手柄旋转，慢速运动，尽量左手柄显示保持在头显屏幕中心
 
-测试时尽量保持头显与右手柄静止不动，否则会影响测试结果。
+测试时尽量保持头显与左手柄静止不动，否则会影响测试结果。
 
 参考结果：
 | Device | Result |
