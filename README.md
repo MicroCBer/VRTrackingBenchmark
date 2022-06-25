@@ -17,7 +17,7 @@ A benchmark for VR tracking system
 
 参考结果：
 | Device | Result |
-|--|--|
+| ---- | ---- |
 | Oculus Quest 2 | 0.013mm/s |
 
 ### b) 头显运动-手柄静止测试
@@ -31,5 +31,5 @@ A benchmark for VR tracking system
 
 参考结果：
 | Device | Result |
-|--|--|
+| ---- | ---- |
 | Oculus Quest 2 | 0.021mm/s |
