@@ -20,7 +20,7 @@ A benchmark for VR tracking system
 |--|--|
 | Oculus Quest 2 | 0.013mm/s |
 
-### a) 头显运动-手柄静止测试
+### b) 头显运动-手柄静止测试
 开始测试前，先将左手柄平放在不会抖动的位置，使左手柄显示在头显屏幕中心。
 
 使用右手柄点击Controller Shake Test开始测试。
