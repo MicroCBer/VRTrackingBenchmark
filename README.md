@@ -19,7 +19,9 @@ A benchmark for VR tracking system
 #### 参考结果
 | Device | Result |
 | ---- | ---- |
-| Oculus Quest 2 | 0.013mm/s |
+| Oculus Quest 2 | 0.0043mm/s |
+| Oculus Quest 2 (Link) | 0.013mm/s |
+| Pico Neo 3 | 0.005mm/s |
 
 ### b) 头显运动-手柄静止测试
 #### 测试内容
@@ -34,4 +36,4 @@ A benchmark for VR tracking system
 #### 参考结果：
 | Device | Result |
 | ---- | ---- |
-| Oculus Quest 2 | 0.021mm/s |
+| Oculus Quest 2 | 0.0045mm/s |
