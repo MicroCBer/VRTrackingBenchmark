@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <!-- <button onclick="startTest()">Start Test</button>
+    <button onclick='document.querySelector(".a-enter-vr-button").click();'>Start VR</button> -->
+
+    <style>
+        button {
+            z-index: 100;
+
+        }
+    </style>
+
+    <a-scene cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable" info-message="htmlSrc: #messageText">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+        <a-entity position="0.5 1 0" camera
+            look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
+            <a-entity id="fadeBackground" geometry="primitive: sphere; radius: 2.5"
+                material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
+            </a-entity>
+        </a-entity>
+
+        <a-sphere class="testing-controller" position="0 1.25 -5" radius="0.1" color="#EF2D5E"></a-sphere>
+        <a-entity class="left-ctrl" raycaster="objects: .raycastable" oculus-touch-controls="hand: left"></a-entity>
+        <a-entity class="right-ctrl" raycaster="objects: .raycastable" line="color: #118A7E"
+            laser-controls="hand: right"></a-entity>
+
+
+        <a-entity class="mainMenu">
+            <a-entity id="title" position="-0.41 1.5 -1"
+                text="shader: msdf; anchor: left; width: 1.9; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: black; value: MicroBlock VR Tracking Benchmark">
+            </a-entity>
+
+            <a-plane position="0 1.4 -1" width="0.8" height="0.1" color="#007acc" class="btnStart raycastable">
+                <a-entity material="color: red; side: back; shader: flat"
+                    text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Controller Shake Test"
+                    position="-0.4 -0.05 0">
+                </a-entity>
+            </a-plane>
+
+            <a-plane position="0 1.28 -1" width="0.8" height="0.1" color="#1e1e1e" class="raycastable">
+                <a-entity material="color: red; side: back; shader: flat"
+                    text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Headset Move Test"
+                    position="-0.4 -0.05 0">
+                </a-entity>
+            </a-plane>
+
+            <a-plane position="0 1.15 -1" width="0.8" height="0.1" color="#1e1e1e" class="raycastable">
+                <a-entity material="color: red; side: back; shader: flat"
+                    text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Controller Move Test"
+                    position="-0.4 -0.05 0">
+                </a-entity>
+            </a-plane>
+
+            <a-plane position="0 1.02 -1" width="0.8" height="0.1" color="#1e1e1e" class="raycastable">
+                <a-entity material="color: red; side: back; shader: flat"
+                    text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Controller Overlap Test"
+                    position="-0.4 -0.05 0">
+                </a-entity>
+            </a-plane>
+        </a-entity>
+        <a-assets>
+        <a-entity class="introduction">
+            <a-asset-item id="messageText" src="/introductions/shake-test-introduction.html"></a-asset-item>
+        </a-entity>
+        </a-assets>
+
+
+        <a-entity id="testingInformation" position="0 1 -1"
+            text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: black;">
+        </a-entity>
+    </a-scene>
+
+    <script src="test.js"></script>
+<script src="./tests/shake-test.js"></script>
+</body>
+
+</html>
